@@ -6,7 +6,11 @@
 function gettodos() {
 
     var todos = new Array;
+
+    // getting Todos as object in string form
     var todos_str = localStorage.getItem('todo');
+
+    // Convert JSON string into object 
     if (todos_str !== null) {
         todos = JSON.parse(todos_str); 
     }
@@ -18,7 +22,7 @@ function gettodos() {
 function add() {
     var task = document.getElementById('task').value;
     
-    // if list is Empty 
+    // if input-txt is Empty 
     if(task===''){
         alert('Plz Enter Some txt Bro!');
         return;
@@ -27,6 +31,8 @@ function add() {
 
     var todos = gettodos();
     todos.push(task);
+
+    // Convert Obj into String 
     localStorage.setItem('todo', JSON.stringify(todos));
  
     show();
@@ -38,22 +44,27 @@ function add() {
 // Reset to Default 
 function clearDefault(a) {
     if (a.defaultValue==a.value){
-        a.value=""
+        a.value="";
     }
-};
+}
 
 
 // Removing ToDo 
 function remove() {
 
+    // gets the value of the id attribute of the current HTML element
     var id = this.getAttribute('id');
     var todos = gettodos();
+
+    // Removing first elemnt by splice 
     todos.splice(id, 1);
     localStorage.setItem('todo', JSON.stringify(todos));
 
     
     // Reduce Counter by 1 on removing ToDo 
     var counter = document.getElementById('count');
+
+    // Convert string to Int - parseInt
     var count = parseInt(counter.innerText);
     if(todos.length===0){
         counter.innerText=0+'';
@@ -82,6 +93,7 @@ function show() {
 
     document.getElementById('todos').innerHTML = html;
 
+    
 
 
     // Increase Counter By 1 
@@ -99,11 +111,11 @@ function show() {
         buttons[i].addEventListener('click', remove);
     };
 
+
 }
 
  
 document.getElementById('add').addEventListener('click', add);
-
 
 
 show();
