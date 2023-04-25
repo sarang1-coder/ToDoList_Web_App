@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My TodoList App
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <script src="https://kit.fontawesome.com/8e5bc71f76.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+    </head>
+
+    <body>
+
+        <div id ="wrapper">
+
+            <!-- Heading  -->
+            <h1> <i><u>Todo List</u></i></h1>
+
+            <!-- Input txt & Btn  -->
+            <div id="input-txt">
+
+                <span id="txt">
+                    <input id="task" placeholder="Enter ToDo"/>
+                </span>
+                
+                <span id="btn">
+                    <button id="add">
+                        <i class="fa-solid fa-file-circle-plus"></i>
+                        
+                    </button>
+                </span>
+
+            </div> 
+            <hr>
+
+            <!-- Tsk Info  -->
+            <div id="tsk-info">
+                <div>Complete Task Bro!!!</div>
+                <div>Clear Task</div>
+            </div>
+
+            
+            <!-- Todos to complete  -->
+            <div id="todos"></div>
+
+            <!-- Counter  -->
+            <div id="todos-count">
+                <p>
+                    Task Count:
+                    <span id="count">0</span>
+                </p>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+        
+    </body>
+</html>
