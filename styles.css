@@ -1,9 +1,11 @@
 body {
   text-align: center;
-  margin: 0;
+  margin-top: 10%;
   color: white;
   background-image: url('https://st3.depositphotos.com/10302016/15914/i/1600/depositphotos_159147496-stock-photo-white-cup-of-coffee-morning.jpg');
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   background-size: cover;
 
 }
